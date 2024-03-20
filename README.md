@@ -6,6 +6,10 @@ wesiteserver is a api connections ,  providing developers with everything they n
 ## Prequistes
 1. Download node js
 2. Download Mysql 8
+3. Create Database and table
+4. database name : alwinsys
+5. table name : quiz
+6. create table quiz(id int AUTO_INCREMENT PRIMARY KEY,question varchar(250),option1 varchar(45),option2 varchar(45),option3 varchar(45),option4 varchar(45),correctAnswer varchar(45));
 
 
 ## Installation
