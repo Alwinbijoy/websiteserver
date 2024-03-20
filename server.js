@@ -33,8 +33,41 @@ app.post("/api/post", (req, res) =>  {
   });
 });
 
+app.delete("/api/remove/:id", (req, res) =>  {
+  const { id } = req.params;
+  const sqlRemove = "DELETE FROM quiz WHERE id = ?";
+  db.query(sqlRemove,id, (error, result) => {
+    if(error){
+      console.log(error);
+    }
+  });
+});
+
+app.get("/api/get/:id", (req, res) => {
+  const {id} = req.params;
+  const sqlGet = "SELECT * from quiz where id = ?";
+  db.query(sqlGet, (error, result) => {
+    if(error){
+      console.log(error);
+    }
+    res.send(result);
+  });
+});
+
+app.put("/api/get/:id", (req, res) => {
+  const {id} = req.params;
+  const { question, option1, option2 , option3, option4, correctAnswer} = req.body;
+  const sqlEdit = "UPDATE quiz SET question=?, option1=?, option2=? , option3=?, option4=?, correctAnswer=? where id = ?";
+  db.query(sqlEdit,[question, option1, option2 , option3, option4, correctAnswer], (error, result) => {
+    if(error){
+      console.log(error);
+    }
+    res.send(result);
+  });
+});
+
 app.get("/", (req, res) => {
-  res.send("Hello Express");
+  res.send("Express on Vercel");
 });
 
 app.listen(5000, () => {
