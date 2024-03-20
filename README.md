@@ -1,4 +1,4 @@
-# wesiteserver is a express js connection Next.js Quiz Application
+# websiteserver is a expressjs connection with Next.js Quiz Application
 
 wesiteserver is a api connections ,  providing developers with everything they need to create a feature-rich and data-driven: back-end  for any sort of web project.
 
