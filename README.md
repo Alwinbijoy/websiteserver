@@ -17,10 +17,11 @@ Here are the steps you need to follow to install the dependencies and prequistes
 
 ```
 npm install
+```
 
 3. Now run this command to start the developement server
 
 ```
-npm run dev
+npm run server
 ```
 
